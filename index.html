@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet"></link>
+    <title>API Calling</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="app.controller.js" defer></script>
+</head>
+<body ng-app="ApiDemo" ng-controller="DataController">
+    <h1>Employee Data</h1>
+    <div class="ControlGrp">
+        <button ng-click="getData()">
+            Get Data
+        </button>
+        <button ng-click="reset()">
+            Clear Data
+        </button>
+    </div>
+    <h1>User List</h1>
+    <div class="DataContainer">
+       
+        <dl class="container" ng-repeat="User in UserData">
+            <div class="userObj">
+                <dt>Name</dt>
+                <dd>{{User.name}}</dd>
+                <dt>Username</dt>
+                <dd>{{User.username}}</dd>
+                <dt>Email</dt>
+                <dd>{{User.email}}</dd>
+            </div>
+            <!-- <dt>Address</dt>
+            <dd>
+                <dl>
+                    <dt>Street</dt>
+                    <dd>{{User.address.street}}</dd>
+                    <dt>Suite</dt>
+                    <dd>{{User.address.suite}}</dd>
+                    <dt>City</dt>
+                    <dd>{{User.address.city}}</dd>
+                    <dt>ZipCode</dt>
+                    <dd>{{User.address.zipcode}}</dd>
+                </dl>
+            </dd>
+            <dt>Phone</dt>
+            <dd>{{User.phone}}</dd>
+            <dt>Website</dt>
+            <dd>{{User.website}}</dd>
+            <dt>Company</dt>
+            <dd>
+                <dl>
+                    <dt>Name</dt>
+                    <dd>{{User.company.name}}</dd>
+                    <dt>CatchPhrase</dt>
+                    <dd>{{User.companu.catchPhrase</dd>
+                </dl>
+            </dd>
+        </dl> -->
+    </div>
+</body>
+</html>
